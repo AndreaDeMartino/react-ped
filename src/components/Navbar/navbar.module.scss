@@ -7,6 +7,10 @@
   margin: 0.3rem;
   color: $grey;
   @include u-flex(row, flex-end);
+  a {
+    color: $grey;
+    transition: color 0.3s linear;
+  }
   .navbarList {
     width: 100%;
     height: 100%;
@@ -35,10 +39,12 @@
       &:hover:before {
         animation-name: leftToRight;
         animation-duration: 1s;
-        animation-fill-mode:forwards;
+        animation-fill-mode: forwards;
       }
       &:hover {
-        color: $blue;
+        a {
+          color: $blue;
+        }
       }
     }
     .navbarLogo {
@@ -46,7 +52,7 @@
       margin-left: 2rem;
       transition: transform 0.3s linear;
       cursor: pointer;
-      &:hover{
+      &:hover {
         transform: scale(1.2);
       }
       .navbarLogoIcon {
@@ -57,7 +63,7 @@
         height: 35px;
         width: 35px;
         object-fit: cover;
- 
+
         border-radius: 50%;
       }
     }

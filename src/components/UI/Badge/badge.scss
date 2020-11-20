@@ -1,0 +1,27 @@
+@import "./../../../style/variables";
+@import "./../../../style/utility";
+
+.badge {
+  height: 100%;
+  width: 1%;
+}
+
+.badgeOrange {
+  background-color: $orange;
+}
+
+.badgePurple {
+  background-color: $purple;
+}
+
+.badgeBlue {
+  background-color: $blue;
+}
+
+.badgeCiano {
+  background-color: $ciano;
+}
+
+.badgeGreen {
+  background-color: $green;
+}

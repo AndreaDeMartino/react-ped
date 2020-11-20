@@ -7,7 +7,7 @@ import Style from "./filters.module.scss";
 import Date from "./Date/Date";
 
 // DATA
-import { calendar } from "../../utility/utility";
+import { calendar } from "../../data/data";
 
 const Filters = () => {
   return (

@@ -25,6 +25,9 @@
         &:last-child{
           margin-right: calc(40% - 52px);
         }
+        &:hover{
+          color: white;
+        }
       }
     }
   }

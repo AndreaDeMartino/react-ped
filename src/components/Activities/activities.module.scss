@@ -1,0 +1,9 @@
+@import "../../style/variables";
+@import "../../style/utility";
+
+.activities{
+  width: 100%;
+  min-height: 300px;
+  margin-top: 3rem;
+  @include u-flex(column);
+}

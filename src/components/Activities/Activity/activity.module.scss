@@ -1,0 +1,51 @@
+@import "../../../style/variables";
+@import "../../../style/utility";
+
+.activity {
+  @include u-flex;
+  height: 80px;
+  width: 100%;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+  margin: 0.3rem 0;
+  text-align: center;
+  h5{
+    color: $grey;
+  }
+  .activityTitle{
+    width: 30%;
+  }
+  .activityLogo {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .activityDuration {
+    @include u-flex;
+    width: 20%;
+    height: 100%;
+    i{
+      padding-right: 5px;
+      color: $grey;
+    }
+  }
+  .activityTiming {
+    @include u-flex;
+    width: 20%;
+    height: 100%;
+    h4{
+      padding-right: 5px;
+    }
+  }
+  .activityStatus {
+    @include u-flex(column);
+    width: 20%;
+    height: 100%;
+  }
+  .activityButton{
+    width: 10%;
+  }
+  i{
+    padding: 0 20px 0 30px;
+    cursor: pointer;
+  }
+}
