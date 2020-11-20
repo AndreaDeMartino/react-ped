@@ -1,0 +1,39 @@
+/****************************************************
+  * VARIABLES
+****************************************************/
+
+/* === COLORS === */
+$yellow: #d4df5d;
+$blue: #013068;
+$purple: #9b29b2;
+$orange: #f14436;
+$ciano: #81d4fc;
+$grey: #757678;
+$lightWhite: rgb(212, 211, 211);
+
+
+/* === FONTS === */
+@font-face {
+  font-family: 'DINOT-black';
+  src: url('../assets/fonts/DINOT-Black/DINOT-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DINOT-bold';
+  src: url('../assets/fonts/DINOT-Bold/DINOT-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DINOT-medium';
+  src: url('../assets/fonts/DINOT-Medium/DINOT-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DINOT-regular';
+  src: url('../assets/fonts/DINOT-Regular/DINOT-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DINOT-light';
+  src: url('../assets/fonts/DINOT-Light/DINOT-Light.ttf') format('truetype');
+}

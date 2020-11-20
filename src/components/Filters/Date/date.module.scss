@@ -1,0 +1,34 @@
+@import "../../../style/variables";
+@import "../../../style/utility";
+
+.date {
+  width: 6%;
+  height: 50%;
+  color: white;
+  @include u-flex(column);
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+  &:hover {
+    background-color: $yellow;
+    .dateText {
+      p {
+        color: $blue;
+      }
+    }
+  }
+  .dateText {
+    transform: skew(-20deg);
+    @include u-flex(column);
+    p {
+      font-family: "DINOT-light";
+      font-size: 14px;
+      color: $lightWhite;
+    }
+    .dateDay {
+      font-family: "DINOT-medium";
+      padding-top: 5px;
+      font-size: 16px;
+      color: white;
+    }
+  }
+}

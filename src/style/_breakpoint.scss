@@ -1,0 +1,81 @@
+/****************************************************
+  * BREAKPOINT
+****************************************************/
+
+/* === SMALL PHONES === */
+@mixin small-mobile {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+/* === PHONES === */
+@mixin mobile {
+  @media (min-width: 576px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+/* === TABLETS === */
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+/* === DESKTOP === */
+@mixin desktop {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+/* === LARGE DESKTOP === */
+@mixin large-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+/* CONTAINER
+  ============================= */
+
+/* == XS == */
+@include small-mobile {
+  .uContainer {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+/* == SM == */
+@include mobile {
+  .uContainer {
+    margin: 0 auto;
+    max-width: 540px;
+  }
+}
+
+/* == MD == */
+@include tablet {
+  .uContainer {
+    margin: 0 auto;
+    max-width: 720px;
+  }
+}
+
+/* == LG == */
+@include desktop {
+  .uContainer {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+}
+
+/* == XL == */
+@include large-desktop {
+  .uContainer {
+    margin: 0 auto;
+    max-width: 1140px;
+  }
+}
