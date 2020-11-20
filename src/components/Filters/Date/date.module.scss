@@ -6,7 +6,7 @@
   height: 50%;
   color: white;
   @include u-flex(column);
-  transition: background-color 0.2s linear;
+  transition: background-color 0.25s linear;
   cursor: pointer;
   &:hover {
     background-color: $yellow;

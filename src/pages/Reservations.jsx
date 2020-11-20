@@ -5,11 +5,11 @@ import React from "react";
 import Filters from "./../components/Filters/Filters";
 import Activities from "./../components/Activities/Activities";
 
-const Reservations = () => {
+const Reservations = ({ activityList }) => {
   return (
     <div className="Reservations">
       <Filters></Filters>
-      <Activities></Activities>
+      <Activities activityList={activityList}></Activities>
     </div>
   );
 };

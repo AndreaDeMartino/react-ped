@@ -2,13 +2,10 @@ import React from "react";
 
 // STYLE
 import Style from "./navbar.module.scss";
-
 //COMPONENTS
 import Container from "../UI/Container/Container";
-
 // IMG
 import userLogo from "../../assets/img/user_logo.jpeg";
-
 //ROUTER
 import { Link } from "react-router-dom";
 

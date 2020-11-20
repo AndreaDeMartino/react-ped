@@ -3,7 +3,8 @@
 
 .activities{
   width: 100%;
-  min-height: 300px;
-  margin-top: 3rem;
-  @include u-flex(column);
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: 3rem 0;
+  @include u-flex(column, none);
 }

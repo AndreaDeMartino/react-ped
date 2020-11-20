@@ -8,8 +8,12 @@ import "./style/main.scss";
 import Home from "./pages/Home";
 import Reservations from "./pages/Reservations";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
-//Router
+//DATA
+import { activityList } from "./data/data";
+
+//ROUTER
 import { Switch, Route } from "react-router-dom";
 
 function App() {
@@ -21,9 +25,10 @@ function App() {
           <Home />
         </Route>
         <Route path="/reservations">
-          <Reservations />
+          <Reservations activityList={activityList}/>
         </Route>
       </Switch>
+      <Footer></Footer>
     </div>
   );
 }
