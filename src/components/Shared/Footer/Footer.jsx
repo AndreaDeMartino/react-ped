@@ -4,13 +4,13 @@ import React from "react";
 import Style from "./footer.module.scss";
 
 //COMPONENTS
-import Container from "../UI/Container/Container";
+import Container from "../../UI/Container/Container";
 
 //IMAGES
-import facebook from "./../../assets/img/facebook.png";
-import instagram from "./../../assets/img/instagram.png";
-import youtube from "./../../assets/img/youtube.jpg";
-import italy from "./../../assets/img/italy.png";
+import facebook from "./../../../assets/img/facebook.png";
+import instagram from "./../../../assets/img/instagram.png";
+import youtube from "./../../../assets/img/youtube.jpg";
+import italy from "./../../../assets/img/italy.png";
 
 const Footer = () => {
   return (

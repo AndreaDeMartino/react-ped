@@ -1,5 +1,6 @@
-@import "../../style/variables";
-@import "../../style/utility";
+@import "../../../style/variables";
+@import "../../../style/utility";
+@import "../../../style/breakpoint";
 
 .navbar {
   width: 100%;
@@ -82,6 +83,22 @@
         object-fit: cover;
         border-radius: 50%;
       }
+    }
+  }
+}
+
+@include small-mobile {
+  .navbar {
+    .navbarList {
+      justify-content: center;
+    }
+  }
+}
+
+@include mobile {
+  .navbar {
+    .navbarList {
+      justify-content: center;
     }
   }
 }

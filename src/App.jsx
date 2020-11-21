@@ -7,8 +7,8 @@ import "./style/main.scss";
 //COMPONENTS
 import Home from "./pages/Home";
 import Reservations from "./pages/Reservations";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Shared/Navbar/Navbar";
+import Footer from "./components/Shared/Footer/Footer";
 
 //DATA
 import { activityList } from "./data/data";
