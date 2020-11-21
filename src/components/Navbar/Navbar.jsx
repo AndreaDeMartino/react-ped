@@ -45,11 +45,22 @@ const Navbar = () => {
               </Link>
             </div>
           )}
-          <div className={Style.navbarItem}>
-            <Link to="/allerts">
-              <i className="far fa-bell"></i>
-            </Link>
-          </div>
+          {url === "/allerts" && (
+            <div className={`${Style.navbarItem} ${Style.active}`}>
+              <Link to="/allerts">
+                <i className="far fa-bell"></i>
+              </Link>
+            </div>
+          )}
+
+          {url !== "/allerts" && (
+            <div className={Style.navbarItem}>
+              <Link to="/allerts">
+                <i className="far fa-bell"></i>
+              </Link>
+            </div>
+          )}
+
           <div className={Style.navbarLogo}>
             <i className={`${Style.navbarLogoIcon} fas fa-chevron-down`}></i>
             <img src={userLogo} alt="user_logo" />
