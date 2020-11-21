@@ -8,19 +8,19 @@ export const getSelector = (list, type) => {
   switch (type) {
     case "category":
       list.map((item) => {
-        array.push("Tutte Le Categorie");
+        array.push("Tutte le categorie");
         array.push(item.category);
       });
       return array;
     case "club":
       list.map((item) => {
-        array.push("Tutti I Club");
+        array.push("Tutti i club");
         array.push(item.club);
       });
       return array;
     case "name":
       list.map((item) => {
-        array.push("Tutte le Attivita");
+        array.push("Tutte le attivita");
         array.push(item.name);
       });
       return array;

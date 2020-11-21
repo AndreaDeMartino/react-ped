@@ -5,7 +5,7 @@ import Style from "./filters.module.scss";
 
 // COMPONENTS
 import Date from "./Date/Date";
-import Box from "../UI/Box/Box";
+import Box from "../Box/Box";
 
 // DATA
 import { calendar } from "../../data/data";
@@ -17,9 +17,10 @@ const Filters = ({
   nameList,
   clubList,
 }) => {
+  
   // Hooks Actual Filter
   const [actualCategory, setActualCategory] = useState("Tutte le categorie");
-  const [actualName, setActualName] = useState("Tutte le attività");
+  const [actualName, setActualName] = useState("Tutte le attivita");
   const [actualClub, setActualClub] = useState("Tutti i club");
 
   // Hooks Toggle
@@ -31,59 +32,45 @@ const Filters = ({
    * Functions
    ****************************************************/
 
-  // Category
+  // Set Actual Category
   const SetCategoryHandler = (category) => {
     setActualCategory(category);
   };
 
-  useEffect(() => {
-    if (actualCategory === "Tutte Le Categorie") {
-      setFilter(activityList);
-    } else {
-      setFilter(
-        activityList.filter((item) => {
-          return item.category === actualCategory;
-        })
-      );
-    }
-    setCategoryListToggle(false);
-  }, [actualCategory]);
-
-  // Name
+  // Set Actual Name
   const SetNameHandler = (name) => {
     setActualName(name);
   };
 
-  useEffect(() => {
-    if (actualName === "Tutte le Attivita") {
-      setFilter(activityList);
-    } else {
-      setFilter(
-        activityList.filter((item) => {
-          return item.name === actualName;
-        })
-      );
-    }
-    setNameListToggle(false);
-  }, [actualName]);
-
-  // Club
+  // Set Actual Club
   const SetClubHandler = (club) => {
     setActualClub(club);
   };
 
-  useEffect(() => {
-    if (actualClub === "Tutti I Club") {
-      setFilter(activityList);
-    } else {
-      setFilter(
-        activityList.filter((item) => {
-          return item.club === actualClub;
-        })
-      );
-    }
+  //  Filter Data
+  const runFilter = () => {
+    setFilter(
+      activityList.filter((item) => {
+        return (
+          (actualCategory !== "Tutte le categorie"
+            ? item.category === actualCategory
+            : item.category) &&
+          (actualName !== "Tutte le attivita"
+            ? item.name === actualName
+            : item.name) &&
+          (actualClub !== "Tutti i club" ? item.club === actualClub : item.club)
+        );
+      })
+    );
+    setCategoryListToggle(false);
+    setNameListToggle(false);
     setClubListToggle(false);
-  }, [actualClub]);
+  };
+
+  // Run filter on changing selection from boxes
+  useEffect(() => {
+    runFilter();
+  }, [actualCategory, actualName, actualClub]);
 
   // Render
   return (
