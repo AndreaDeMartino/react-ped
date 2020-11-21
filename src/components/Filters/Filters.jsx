@@ -17,7 +17,6 @@ const Filters = ({
   nameList,
   clubList,
 }) => {
-  
   // Hooks Actual Filter
   const [actualCategory, setActualCategory] = useState("Tutte le categorie");
   const [actualName, setActualName] = useState("Tutte le attivita");
@@ -72,6 +71,9 @@ const Filters = ({
     runFilter();
   }, [actualCategory, actualName, actualClub]);
 
+  // Mobile
+  const [mobileFilterToggle, setMobileFilterToggle] = useState(false);
+
   // Render
   return (
     <div className={Style.filters}>
@@ -86,8 +88,24 @@ const Filters = ({
           <i className="fas fa-chevron-right"></i>
         </div>
       </div>
-      <div className={Style.filtersSelectionWrapper}>
+      <div
+        className={
+          mobileFilterToggle
+            ? Style.filtersActive + " " + Style.filtersSelectionWrapper
+            : Style.filtersSelectionWrapper
+        }
+      >
         <div className={Style.filtersSelection}>
+          <div
+            className={Style.filtersMobileToggle}
+            onClick={() => {
+              setMobileFilterToggle(!mobileFilterToggle);
+            }}
+          >
+            <i className="fas fa-sliders-h"></i>
+            <p>Filtri</p>
+          </div>
+
           <div className={`${Style.selector} ${Style.selectionClub}`}>
             <i className="fas fa-map-marker-alt"></i>
             <p className={Style.selectorText}>{actualClub}</p>

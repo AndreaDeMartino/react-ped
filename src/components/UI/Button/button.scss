@@ -10,6 +10,7 @@
   font-size: 14px;
   position: relative;
   overflow: hidden;
+  z-index: 0;
   cursor: pointer;
   @include u-flex;
   p {

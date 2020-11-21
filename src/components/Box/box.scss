@@ -1,5 +1,6 @@
 @import "./../../style/variables";
 @import "./../../style/utility";
+@import "./../../style/breakpoint";
 
 .box {
   position: absolute;
@@ -13,7 +14,6 @@
   background-color: white;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 3);
   z-index: 20;
-  @include u-flex(column, flex-start, center);
   .boxItem {
     width: 100%;
     padding: 0.5rem 1.5rem;
@@ -47,3 +47,13 @@
   }
 }
 
+
+/****************************************************
+* RESPONSIVE
+****************************************************/
+
+@include small-mobile {
+  .box{
+    font-size: 12px;
+  }
+}

@@ -1,5 +1,6 @@
 @import "../../../style/variables";
 @import "../../../style/utility";
+@import "../../../style/breakpoint";
 
 .date {
   width: 6%;
@@ -29,6 +30,46 @@
       padding-top: 5px;
       font-size: 16px;
       color: white;
+    }
+  }
+}
+
+/****************************************************
+* RESPONSIVE
+****************************************************/
+
+@include small-mobile {
+  .date {
+    width: 10%;
+    padding: 0 6%;
+    background-color: white;
+    .dateText {
+      transform: skew(0deg);
+      p {
+        color: $blue;
+        font-size: 12px;
+      }
+      .dateDay {
+        color: $blue;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .date {
+    width: 12%;
+    padding: 0 6%;
+    background-color: white;
+    .dateText {
+      transform: skew(0deg);
+      p {
+        color: $blue;
+        font-size: 12px;
+      }
+      .dateDay {
+        color: $blue;
+      }
     }
   }
 }
