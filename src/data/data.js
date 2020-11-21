@@ -72,7 +72,7 @@ export const activityList = [
     duration: 40,
     startTime: '09:20',
     endTime: '10:00',
-    occupancy: '03/20',
+    occupancy: '15/20',
     status: 'Avaible',
     category: 'Relax',
     club: 'Club Ravizza',
@@ -104,7 +104,7 @@ export const activityList = [
     occupancy: '12/30',
     status: 'Avaible',
     category: 'Corpo Libero',
-    club: 'Club Random',
+    club: 'Club Manfredi',
     logo: 'https://i.ibb.co/wsHFjxH/Outdoor-yoga.jpg',
     color: 'Green',
   },
@@ -132,9 +132,8 @@ export const activityList = [
     occupancy: '12/30',
     status: 'Avaible',
     category: 'Corpo Libero',
-    club: 'Club Random',
+    club: 'Club Manfredi',
     logo: 'https://i.ibb.co/wsHFjxH/Outdoor-yoga.jpg',
     color: 'Green',
   },
-
 ]

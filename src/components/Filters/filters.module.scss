@@ -45,6 +45,8 @@
       transform: skew(20deg);
       @include u-flex;
       .selector{
+        width: 250px;
+        position: relative;
         transform: skew(-20deg);
         color: $blue;
         padding: 0.3%;

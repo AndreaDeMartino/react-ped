@@ -1,0 +1,49 @@
+@import "./../../../style/variables";
+@import "./../../../style/utility";
+
+.box {
+  position: absolute;
+  left: 0;
+  bottom: -130px;
+  height: 130px;
+  max-height: 130px;
+  width: 300px;
+  overflow-y: scroll;
+  color: $blue;
+  background-color: white;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 3);
+  z-index: 20;
+  @include u-flex(column, flex-start, center);
+  .boxItem {
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    @include u-flex(row, space-between, center);
+    &:first-child {
+      margin-top: 0.5rem;
+    }
+    span {
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+    }
+    span.CorpoLibero {
+      background-color: $green;
+    }
+    span.Relax {
+      background-color: $purple;
+    }
+    span.Potenziamento {
+      background-color: $ciano;
+    }
+    .noBadge {
+      display: none;
+    }
+    &:hover {
+      background-color: $lightWhite;
+      font-weight: bold;
+    }
+  }
+}
+

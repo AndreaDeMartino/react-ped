@@ -36,7 +36,7 @@
         width: 100%;
         background-color: $yellow;
       }
-      &:hover:before {
+      &:not(.active):hover:before {
         animation-name: leftToRight;
         animation-duration: 1s;
         animation-fill-mode: forwards;
@@ -47,10 +47,27 @@
         }
       }
     }
+    .active {
+      a {
+        color: $blue;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        opacity: 1;
+        transform: skew(10deg);
+        bottom: 10px;
+        left: -2px;
+        height: 10px;
+        width: 100%;
+        background-color: $yellow;
+      }
+    }
     .navbarLogo {
       @include u-flex;
       margin-left: 2rem;
-      transition: transform 0.3s linear;
+      transition: all 0.3s linear;
       cursor: pointer;
       &:hover {
         transform: scale(1.2);
@@ -63,7 +80,6 @@
         height: 35px;
         width: 35px;
         object-fit: cover;
-
         border-radius: 50%;
       }
     }

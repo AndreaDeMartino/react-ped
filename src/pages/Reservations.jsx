@@ -1,15 +1,44 @@
 //React
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 //COMPONENTS
 import Filters from "./../components/Filters/Filters";
 import Activities from "./../components/Activities/Activities";
 
+// UTILITY
+import { getSelector, removeDuplicate } from "./../utility";
+
 const Reservations = ({ activityList }) => {
+  // All activity
+  const [filterData, setfilterData] = useState(activityList);
+
+  // All type lists
+  const [categoryList, setCategoryList] = useState([]);
+  const [nameList, setNameList] = useState([]);
+  const [clubList, setClubList] = useState([]);
+
+  // Get clean lists
+  useEffect(() => {
+    const categories = removeDuplicate(getSelector(activityList, "category"));
+    const name = removeDuplicate(getSelector(activityList, "name"));
+    const club = removeDuplicate(getSelector(activityList, "club"));
+
+    setCategoryList(categories);
+    setNameList(name);
+    setClubList(club);
+    setfilterData(activityList)
+  }, [activityList]);
+
   return (
     <div className="Reservations">
-      <Filters></Filters>
-      <Activities activityList={activityList}></Activities>
+      <Filters 
+        activityList={activityList}
+        setFilter={setfilterData}
+        categoryList={categoryList}
+        nameList={nameList}
+        clubList={clubList}
+      ></Filters>
+      <Activities activityList={filterData}></Activities>
     </div>
   );
 };
