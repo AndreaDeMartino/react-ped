@@ -10,6 +10,14 @@ import Box from "../Box/Box";
 // DATA
 import { calendar } from "../../data/data";
 
+// MOTION
+import { motion } from "framer-motion";
+
+// UTILITY
+import { componentsAnimation } from "./../../utility";
+import { left } from "./../../utility";
+import { right } from "./../../utility";
+
 const Filters = ({
   activityList,
   setFilter,
@@ -80,12 +88,18 @@ const Filters = ({
   }, [actualCategory, actualName, actualClub, setFilter, activityList]);
 
   /****************************************************
-  * JSX
-  ****************************************************/
+   * JSX
+   ****************************************************/
 
   return (
-    <div className={Style.filters}>
-      <div className={Style.filtersCalendarWrapper}>
+    <motion.div
+      className={Style.filters}
+      variants={componentsAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
+      <motion.div className={Style.filtersCalendarWrapper} variants={left}>
         <div className={Style.filtersCalendar}>
           <i className="fas fa-chevron-left"></i>
           {calendar.map((date) => {
@@ -95,13 +109,14 @@ const Filters = ({
           })}
           <i className="fas fa-chevron-right"></i>
         </div>
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         className={
           mobileFilterToggle
             ? Style.filtersActive + " " + Style.filtersSelectionWrapper
             : Style.filtersSelectionWrapper
         }
+        variants={right}
       >
         <div className={Style.filtersSelection}>
           <div
@@ -183,8 +198,8 @@ const Filters = ({
             )}
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

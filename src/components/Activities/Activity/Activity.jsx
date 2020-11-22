@@ -7,18 +7,13 @@ import Style from "./activity.module.scss";
 import Badge from "../../UI/Badge/Badge";
 import Button from "../../UI/Button/Button";
 
+// MOTION
+import { motion } from "framer-motion";
+
+// UTILITY
+import { top } from "./../../../utility";
+
 const Activity = ({ activity }) => {
-  const [width, setWidth] = React.useState(window.innerWidth);
-  const breakpoint = 575;
-
-  useEffect(() => {
-    const handleWindowResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleWindowResize);
-
-    // Return a function from the effect that removes the event listener
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
-
   /****************************************************
    * FUNCTIONS
    ****************************************************/
@@ -51,8 +46,23 @@ const Activity = ({ activity }) => {
         return "Errore";
     }
   };
+
+  // DETECT BREAKPOINT
+  /****************************************************/
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 575;
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+
+    // Remove the event listener
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+  /****************************************************/
+
   return (
-    <div className={Style.activity}>
+    <motion.div className={Style.activity} variants={top}>
       <Badge className={Style.activityBade} color={activity.color}></Badge>
       <img
         className={Style.activityLogo}
@@ -81,7 +91,7 @@ const Activity = ({ activity }) => {
         text={getText()}
       ></Button>
       {width > breakpoint && <i className="fas fa-chevron-right"></i>}
-    </div>
+    </motion.div>
   );
 };
 
