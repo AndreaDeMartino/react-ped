@@ -1,4 +1,4 @@
-//React
+//REACT
 import React, { useState, useEffect } from "react";
 
 //STYLE
@@ -17,7 +17,8 @@ import { activityListData } from "./data/data";
 //ROUTER
 import { Switch, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
+  // Hooks
   const [activityList, setActivityList] = useState([]);
 
   // Set List from local data
@@ -25,7 +26,7 @@ function App() {
     setActivityList(activityListData);
   }, []);
 
-  // Change List status from from activity button
+  // Change List status from activity button
   const changeListHandler = (element) => {
     let newStatus = "";
     if (element.status === "Subscribed") {
@@ -39,12 +40,14 @@ function App() {
     }
   };
 
+  // Utility for changeListHandler
   const setList = (element, newStatus) => {
     const newList = [...activityList];
     newList[element.id - 1].status = newStatus;
     setActivityList(newList);
   };
 
+  // JSX
   return (
     <div className="App">
       <Navbar></Navbar>
@@ -65,6 +68,6 @@ function App() {
       <Footer></Footer>
     </div>
   );
-}
+};
 
 export default App;

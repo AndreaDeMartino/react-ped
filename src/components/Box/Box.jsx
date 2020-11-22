@@ -1,3 +1,6 @@
+// REACT
+import React from 'react'
+
 // STYLE
 import "./box.scss";
 

@@ -1,4 +1,4 @@
-//React
+//REACT
 import React, { useState, useEffect } from "react";
 
 //STYLE

@@ -128,6 +128,7 @@ export const top = {
   show: { y: 0, transition: { duration: 1.5 } },
 };
 
+// Box Animation
 export const boxAnimation = {
   hidden: { opacity: 0, bottom: -100 },
   show: { opacity: 1, bottom: -130, transition: { duration: 0.3 } }

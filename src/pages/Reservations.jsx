@@ -1,4 +1,4 @@
-//React
+//REACT
 import React, { useState, useEffect } from "react";
 
 //STYLE
@@ -12,10 +12,11 @@ import Activities from "./../components/Activities/Activities";
 import { getSelector, removeDuplicate } from "./../utility";
 
 const Reservations = ({ activityList, changeList }) => {
-  // All activity
+
+  // All activity Hook
   const [filterData, setfilterData] = useState(activityList);
 
-  // All type lists
+  // All type lists Hook
   const [categoryList, setCategoryList] = useState([]);
   const [nameList, setNameList] = useState([]);
   const [clubList, setClubList] = useState([]);

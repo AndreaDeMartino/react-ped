@@ -1,3 +1,4 @@
+// REACT
 import React, { useState, useEffect } from "react";
 
 // STYLE
@@ -61,6 +62,7 @@ const Activity = ({ activity, changeList, type }) => {
   }, []);
   /****************************************************/
 
+  //JSX
   return (
     <motion.div
       className={

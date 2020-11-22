@@ -1,4 +1,6 @@
+// REACT
 import React from "react";
+
 // STYLE
 import Style from "./activities.module.scss";
 
