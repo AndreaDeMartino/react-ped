@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b228b2f0.chunk.css",
+    "main.js": "/static/js/main.cfb0a1d6.chunk.js",
+    "main.js.map": "/static/js/main.cfb0a1d6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.251bdfaf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.251bdfaf.js.map",
+    "static/js/2.bb93543e.chunk.js": "/static/js/2.bb93543e.chunk.js",
+    "static/js/2.bb93543e.chunk.js.map": "/static/js/2.bb93543e.chunk.js.map",
+    "static/js/3.b7cc6e3d.chunk.js": "/static/js/3.b7cc6e3d.chunk.js",
+    "static/js/3.b7cc6e3d.chunk.js.map": "/static/js/3.b7cc6e3d.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b228b2f0.chunk.css.map": "/static/css/main.b228b2f0.chunk.css.map",
+    "static/js/2.bb93543e.chunk.js.LICENSE.txt": "/static/js/2.bb93543e.chunk.js.LICENSE.txt",
+    "static/media/box.scss": "/static/media/DINOT-Regular.64011806.ttf",
+    "static/media/arco.abd03298.png": "/static/media/arco.abd03298.png",
+    "static/media/banner_app.ccd9489b.png": "/static/media/banner_app.ccd9489b.png",
+    "static/media/instagram.6030a881.png": "/static/media/instagram.6030a881.png",
+    "static/media/user_logo.92319e5d.png": "/static/media/user_logo.92319e5d.png",
+    "static/media/work.2629a8f0.png": "/static/media/work.2629a8f0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.251bdfaf.js",
+    "static/js/2.bb93543e.chunk.js",
+    "static/css/main.b228b2f0.chunk.css",
+    "static/js/main.cfb0a1d6.chunk.js"
+  ]
+}
