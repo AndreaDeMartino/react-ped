@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // STYLE
 import Style from "./activity.module.scss";
@@ -8,6 +8,21 @@ import Badge from "../../UI/Badge/Badge";
 import Button from "../../UI/Button/Button";
 
 const Activity = ({ activity }) => {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 575;
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+
+    // Return a function from the effect that removes the event listener
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
+  /****************************************************
+   * FUNCTIONS
+   ****************************************************/
+
   const getText = () => {
     switch (activity.status) {
       case "Subscribed":
@@ -15,7 +30,7 @@ const Activity = ({ activity }) => {
       case "Avaible":
         return "ISCRIVITI";
       case "Waiting":
-        return "METTITI IN ATTESA";
+        return "IN ATTESA";
       case "NotAvaible":
         return "NON DISPONIBILE";
       default:
@@ -24,7 +39,7 @@ const Activity = ({ activity }) => {
   };
   const getDescription = () => {
     switch (getText()) {
-      case "METTITI IN ATTESA":
+      case "IN ATTESA":
         return "Prenota il tuo turno";
       case "ISCRIVITI":
         return "Posti Disponibili";
@@ -44,7 +59,10 @@ const Activity = ({ activity }) => {
         src={activity.logo}
         alt={activity.name}
       />
-      <h3 className={Style.activityTitle}>{activity.name}</h3>
+      <h3 className={Style.activityTitle}>
+        {activity.name}
+        {width < breakpoint && <i className="fas fa-chevron-right"></i>}
+      </h3>
       <div className={Style.activityDuration}>
         <i className="far fa-clock"></i>
         <h5>{activity.duration} min</h5>
@@ -57,8 +75,12 @@ const Activity = ({ activity }) => {
         <h4>{activity.occupancy}</h4>
         <h5>{getDescription()}</h5>
       </div>
-      <Button className={Style.activityButton} color={activity.status} text={getText()}></Button>
-      <i className="fas fa-chevron-right"></i>
+      <Button
+        className={Style.activityButton}
+        color={activity.status}
+        text={getText()}
+      ></Button>
+      {width > breakpoint && <i className="fas fa-chevron-right"></i>}
     </div>
   );
 };

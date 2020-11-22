@@ -1,6 +1,9 @@
 //React
 import React, { useState, useEffect } from "react";
 
+//STYLE
+import Style from "./reservation.module.scss";
+
 //COMPONENTS
 import Filters from "./../components/Filters/Filters";
 import Activities from "./../components/Activities/Activities";
@@ -30,7 +33,7 @@ const Reservations = ({ activityList }) => {
   }, [activityList]);
 
   return (
-    <div className="Reservations">
+    <div className={Style.reservation}>
       <Filters 
         activityList={activityList}
         setFilter={setfilterData}

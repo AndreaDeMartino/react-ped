@@ -59,29 +59,55 @@
   .activity {
     display: unset;
     height: 150px;
-    width: 90%;
+    width: 80%;
+    padding: 60px;
     position: relative;
     overflow: hidden;
+    text-align: left;
     .activityLogo {
       display: none;
     }
     .activityTitle {
+      position: absolute;
+      @include u-flex(row, flex-start);
+      top: 34%;
+      left: 3%;
+      color: $blue;
+      width: 100%;
+      font-size: 18px;
+      i {
+        padding: 0;
+        margin-left: 8px;
+        font-size: 14px;
+      }
     }
     .activityDuration {
-      @include u-flex;
       position: absolute;
-      top: 2%;
-      left: 2%;
+      top: -30%;
+      right: 5%;
+      width: 100px;
     }
     .activityTiming {
+      justify-content: initial;
+      position: absolute;
+      font-size: 16px;
+      top: -30%;
+      left: 3%;
     }
     .activityStatus {
-    }
-    .activity.occupancy {
-    }
-    h5 {
-    }
-    i {
+      align-items: flex-start;
+      justify-content: initial;
+      position: absolute;
+      font-size: 14px;
+      top: 65%;
+      left: 3%;
+      width: 100%;
+      h4 {
+        padding-bottom: 5px;
+        font-size: 13px;
+        font-family: "DINOT-bold";
+        color: $grey;
+      }
     }
   }
 }
