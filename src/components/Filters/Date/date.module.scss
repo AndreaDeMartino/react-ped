@@ -55,21 +55,3 @@
     }
   }
 }
-
-@include mobile {
-  .date {
-    width: 12%;
-    padding: 0 6%;
-    background-color: white;
-    .dateText {
-      transform: skew(0deg);
-      p {
-        color: $blue;
-        font-size: 12px;
-      }
-      .dateDay {
-        color: $blue;
-      }
-    }
-  }
-}
