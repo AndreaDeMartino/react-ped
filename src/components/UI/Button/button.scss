@@ -77,6 +77,18 @@
     height: 40px;
     text-align: center;
 }
+
+.buttonHomeBanner.home{
+  background-color: $yellow;
+  color: $blue;
+  left: 0;
+  top: 130%;
+  width: 200px;
+  p {
+    padding: 10px 20px;
+    z-index: 2;
+  }
+}
 /****************************************************
 * RESPONSIVE
 ****************************************************/

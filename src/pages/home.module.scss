@@ -9,8 +9,15 @@
   .homeArc {
     margin: 32% 0 3% 0;
     width: 100%;
+    position: relative;
     img {
       width: 100%;
+    }
+    .ArcText{
+      position: absolute;
+      color: white;
+      left: 10%;
+      top: 20%;
     }
   }
   .HomeLogo {

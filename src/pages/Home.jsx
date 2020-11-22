@@ -11,6 +11,7 @@ import BannerApp from "./../assets/img/banner_app.png";
 //COMPONENTS
 import Banner from "./../components/Banner/Banner";
 import Container from "./../components/UI/Container/Container";
+import Button from "./../components/UI/Button/Button";
 import Alerts from "../components/Alerts/Alerts";
 
 // MOTION
@@ -49,6 +50,11 @@ const Home = ({ activityList }) => {
           <Container>
             <motion.div className={Style.homeArc} variants={leftLong}>
               <img src={Arco} alt="Arco" />
+              <div className={Style.ArcText}>
+                <h4>Allenati con noi all'Arco della Pace</h4>
+                <h4>Tutte le domeniche</h4>
+                <Button text= 'SCOPRI DI PIÙ' color='HomeBanner' type='home'></Button>
+              </div>
             </motion.div>
             <Alerts></Alerts>
             <motion.div className={Style.HomeLogo} variants={rightLong}>
