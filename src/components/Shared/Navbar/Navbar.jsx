@@ -48,17 +48,17 @@ const Navbar = () => {
               </Link>
             </div>
           )}
-          {url === "/allerts" && (
+          {url === "/alerts" && (
             <div className={`${Style.navbarItem} ${Style.active}`}>
-              <Link to="/allerts">
+              <Link to="/alerts">
                 <i className="far fa-bell"></i>
               </Link>
             </div>
           )}
 
-          {url !== "/allerts" && (
+          {url !== "/alerts" && (
             <div className={Style.navbarItem}>
-              <Link to="/allerts">
+              <Link to="/alerts">
                 <i className="far fa-bell"></i>
               </Link>
             </div>

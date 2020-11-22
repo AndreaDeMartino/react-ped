@@ -62,6 +62,23 @@ export const filterAnimation = {
   },
 };
 
+export const homeAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      when: "beforeChildren",
+      staggerChildren: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
+
 export const activityAnimation = {
   hidden: {
     opacity: 0,
@@ -91,6 +108,19 @@ export const right = {
   hidden: { x: 2500 },
   show: { x: 0, transition: { duration: 1.5 } },
 };
+
+//Cascade Childreen left
+export const leftLong = {
+  hidden: { x: -2500 },
+  show: { x: 0, transition: { duration: 2 } },
+};
+
+//Cascade Childreen right
+export const rightLong = {
+  hidden: { x: 2500 },
+  show: { x: 0, transition: { duration: 2 } },
+};
+
 
 //Cascade Childreen top
 export const top = {

@@ -1,0 +1,49 @@
+@import "./../../../style/variables";
+@import "./../../../style/utility";
+@import "./../../../style/breakpoint";
+
+.alert {
+  width: 100%;
+  height: 100px;
+  max-height: 450px;
+  box-shadow: 3px 3px 12px rgba(90, 90, 90, 0.2);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  overflow-y: scroll;
+  cursor: pointer;
+  @include u-flex(column, center, center);
+  .alertHeader {
+    width: 100%;
+    margin: 0.5rem;
+    padding-top: 0.5rem;
+    @include u-flex(row, space-between, center);
+    .alertTitle {
+      width: 60%;
+      @include u-flex;
+      h3 {
+        min-width: 90%;
+        font-size: 16px;
+        font-family: "DINOT-medium";
+        padding-top: 3px;
+      }
+      i {
+        padding-right: 2rem;
+        color: $orange;
+        font-size: 6px;
+      }
+    }
+
+    h4 {
+      font-size: 14px;
+      color: $grey;
+      font-family: "DINOT-light";
+    }
+  }
+  .alertBody {
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    color: $grey;
+    font-family: "DINOT-small";
+  }
+}

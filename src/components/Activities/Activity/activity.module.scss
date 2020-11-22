@@ -51,6 +51,68 @@
   }
 }
 
+.activity.home {
+  display: unset;
+  background-color: white;
+  height: 150px;
+  width: 100%;
+  padding: 80px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  z-index: 10;
+  color: black;
+  &>i{
+    display: none;
+  }
+  .activityLogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .activityTitle {
+    position: absolute;
+    @include u-flex(row, flex-start);
+    top: 34%;
+    left: 38%;
+    color: $blue;
+    width: 100%;
+    font-size: 18px;
+  }
+  .activityDuration {
+    position: absolute;
+    top: -30%;
+    right: 5%;
+    width: 100px;
+  }
+  .activityTiming {
+    justify-content: initial;
+    position: absolute;
+    font-size: 16px;
+    top: -30%;
+    left: 38%;
+  }
+  .activityStatus {
+    align-items: flex-start;
+    justify-content: initial;
+    position: absolute;
+    font-size: 14px;
+    top: 65%;
+    left: 38%;
+    width: 100%;
+    h4 {
+      padding-bottom: 5px;
+      font-size: 13px;
+      font-family: "DINOT-bold";
+      color: $grey;
+    }
+  }
+}
 /****************************************************
 * RESPONSIVE
 ****************************************************/

@@ -1,0 +1,57 @@
+@import "../../style/variables";
+@import "../../style/utility";
+
+.banner {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  h2 {
+    font-size: 16px;
+    padding-bottom: 3%;
+    font-family: "DINOT-regular";
+    span {
+      font-family: "DINOT-bold";
+    }
+    i {
+      padding-right: 0.5rem;
+    }
+  }
+  .bannerActivity {
+    height: 100%;
+    width: 50%;
+    padding: 2% 5% 0 5%;
+    position: relative;
+    color: $yellow;
+    @include u-flex(column, flex-start, flex-start);
+    &:before {
+      content: "";
+      position: absolute;
+      left: -20%;
+      top: 0;
+      height: 100%;
+      width: 120%;
+      background-color: $blue;
+      transform: skew(20deg);
+      z-index: -1;
+    }
+  }
+  .bannerPending {
+    height: 100%;
+    width: 50%;
+    padding: 2% 5% 0 5%;
+    position: relative;
+    color: $blue;
+    @include u-flex(column, space-between, flex-start);
+    &:before {
+      content: "";
+      position: absolute;
+      left: -1%;
+      top: 0;
+      height: 100%;
+      width: 120%;
+      background-color: $yellow;
+      transform: skew(20deg);
+      z-index: -1;
+    }
+  }
+}

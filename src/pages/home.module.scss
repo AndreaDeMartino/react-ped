@@ -1,0 +1,35 @@
+@import "./../style/variables";
+@import "./../style/utility";
+@import "./../style/breakpoint";
+
+.home {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 80vh;
+  .homeArc {
+    margin: 32% 0 3% 0;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .HomeLogo {
+    margin: 3rem 0;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .MobileAllert{
+    width: 100%;
+    height: calc(100vh - 100px);
+    text-align: center;
+    @include u-flex(column);
+    h2{
+      color: $blue;
+    }
+    h3{
+      padding-top: .5rem;
+    }
+  }
+}

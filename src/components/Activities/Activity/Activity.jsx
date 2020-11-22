@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 // UTILITY
 import { top } from "./../../../utility";
 
-const Activity = ({ activity, changeList }) => {
+const Activity = ({ activity, changeList, type }) => {
   /****************************************************
    * FUNCTIONS
    ****************************************************/
@@ -62,13 +62,24 @@ const Activity = ({ activity, changeList }) => {
   /****************************************************/
 
   return (
-    <motion.div className={Style.activity} variants={top}>
-      <Badge className={Style.activityBade} color={activity.color}></Badge>
+    <motion.div
+      className={
+        type === "home"
+          ? `${Style.activity} ${Style.activity} ${Style.home}`
+          : Style.activity
+      }
+      variants={top}
+    >
+      {type !== "home" && (
+        <Badge className={Style.activityBade} color={activity.color}></Badge>
+      )}
+
       <img
         className={Style.activityLogo}
         src={activity.logo}
         alt={activity.name}
       />
+
       <h3 className={Style.activityTitle}>
         {activity.name}
         {width < breakpoint && <i className="fas fa-chevron-right"></i>}
@@ -91,6 +102,7 @@ const Activity = ({ activity, changeList }) => {
         text={getText()}
         element={activity}
         changeList={changeList}
+        type={type === "home" && "home"}
       ></Button>
       {width > breakpoint && <i className="fas fa-chevron-right"></i>}
     </motion.div>
