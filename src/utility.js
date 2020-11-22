@@ -52,7 +52,6 @@ export const filterAnimation = {
   show: {
     opacity: 1,
     transition: {
-      delay: 1,
       duration: 0.4,
       when: "beforeChildren",
       staggerChildren: 0.25,
@@ -70,6 +69,7 @@ export const activityAnimation = {
   show: {
     opacity: 1,
     transition: {
+      delay: 0.8,
       duration: 0.3,
       when: "beforeChildren",
       staggerChildren: 0.3,
@@ -92,9 +92,13 @@ export const right = {
   show: { x: 0, transition: { duration: 1.5 } },
 };
 
-
 //Cascade Childreen top
 export const top = {
   hidden: { y: 2000 },
   show: { y: 0, transition: { duration: 1.5 } },
+};
+
+export const boxAnimation = {
+  hidden: { opacity: 0, bottom: -100 },
+  show: { opacity: 1, bottom: -130, transition: { duration: 0.3 } }
 };

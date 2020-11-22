@@ -1,9 +1,20 @@
 // STYLE
 import "./box.scss";
 
+// MOTION
+import { motion } from "framer-motion";
+
+// UTILITY
+import { boxAnimation } from "./../../utility";
+
 const Box = ({ list, colored, setItem }) => {
   return (
-    <div className="box">
+    <motion.div
+      className="box"
+      variants={boxAnimation}
+      initial="hidden"
+      animate="show"
+    >
       {list.map((item, index) => {
         return (
           <div className="boxItem" key={index} onClick={() => setItem(item)}>
@@ -14,7 +25,7 @@ const Box = ({ list, colored, setItem }) => {
           </div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 
