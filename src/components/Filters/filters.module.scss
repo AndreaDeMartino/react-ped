@@ -73,6 +73,9 @@
       }
     }
   }
+  .filtersSelectionWrapper.filtersActive {
+    display: flex;
+  }
 }
 
 /****************************************************
@@ -114,7 +117,7 @@
           }
         }
         .selector {
-          position:relative;
+          position: relative;
           width: 80%;
           padding: 0.3rem 0.5rem;
           transform: skew(0deg);
@@ -132,15 +135,15 @@
       }
     }
   }
-}
-.filtersSelectionWrapper.filtersActive {
-  height: 50px;
-  .filtersSelection {
-    .filtersMobileToggle{
-      margin-bottom: 0;
-    }
-    .selector {
-      display: none;
+  .filtersSelectionWrapper.filtersActive {
+    height: 50px;
+    .filtersSelection {
+      .filtersMobileToggle {
+        margin-bottom: 0;
+      }
+      .selector {
+        display: none;
+      }
     }
   }
 }

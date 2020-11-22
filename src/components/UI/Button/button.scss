@@ -63,7 +63,7 @@
   background-color: $lightWhite;
   color: $grey;
   opacity: 0.7;
-  cursor: wait;
+  cursor: not-allowed;
   &:before {
     background-color: rgb(53, 51, 51);
   }

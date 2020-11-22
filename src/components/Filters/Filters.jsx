@@ -17,6 +17,10 @@ const Filters = ({
   nameList,
   clubList,
 }) => {
+  /****************************************************
+   * HOOKS
+   ****************************************************/
+
   // Hooks Actual Filter
   const [actualCategory, setActualCategory] = useState("Tutte le categorie");
   const [actualName, setActualName] = useState("Tutte le attivita");
@@ -27,6 +31,9 @@ const Filters = ({
   const [nameListToggle, setNameListToggle] = useState(false);
   const [clubListToggle, setClubListToggle] = useState(false);
 
+  // Hooks Mobile Toggle
+  const [mobileFilterToggle, setMobileFilterToggle] = useState(true);
+
   /****************************************************
    * Functions
    ****************************************************/
@@ -34,20 +41,29 @@ const Filters = ({
   // Set Actual Category
   const SetCategoryHandler = (category) => {
     setActualCategory(category);
+    setCategoryListToggle(false);
+    setNameListToggle(false);
+    setClubListToggle(false);
   };
 
   // Set Actual Name
   const SetNameHandler = (name) => {
     setActualName(name);
+    setCategoryListToggle(false);
+    setNameListToggle(false);
+    setClubListToggle(false);
   };
 
   // Set Actual Club
   const SetClubHandler = (club) => {
     setActualClub(club);
+    setCategoryListToggle(false);
+    setNameListToggle(false);
+    setClubListToggle(false);
   };
 
-  //  Filter Data
-  const runFilter = () => {
+  // Run filter on changing selection from boxes or changing data entry
+  useEffect(() => {
     setFilter(
       activityList.filter((item) => {
         return (
@@ -61,20 +77,12 @@ const Filters = ({
         );
       })
     );
-    setCategoryListToggle(false);
-    setNameListToggle(false);
-    setClubListToggle(false);
-  };
+  }, [actualCategory, actualName, actualClub, setFilter, activityList]);
 
-  // Run filter on changing selection from boxes
-  useEffect(() => {
-    runFilter();
-  }, [actualCategory, actualName, actualClub]);
+  /****************************************************
+  * JSX
+  ****************************************************/
 
-  // Mobile
-  const [mobileFilterToggle, setMobileFilterToggle] = useState(false);
-
-  // Render
   return (
     <div className={Style.filters}>
       <div className={Style.filtersCalendarWrapper}>
