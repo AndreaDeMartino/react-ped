@@ -124,7 +124,14 @@ const Filters = ({
             )}
           </div>
 
-          <div className={`${Style.selector} ${Style.selectionCategory}`}>
+          <div
+            className={`${Style.selector} ${Style.selectionCategory}`}
+            style={
+              clubListToggle && window.matchMedia("(max-width: 575px)").matches
+                ? { visibility: "hidden" }
+                : { visibility: "visible" }
+            }
+          >
             <i className="fas fa-fire"></i>
             <p className={Style.selectorText}>{actualCategory}</p>
             <i
@@ -141,8 +148,15 @@ const Filters = ({
               ></Box>
             )}
           </div>
-
-          <div className={`${Style.selector} ${Style.selectionActivity}`}>
+          <div
+            className={`${Style.selector} ${Style.selectionActivity}`}
+            style={
+              (clubListToggle || categoryListToggle) &&
+              window.matchMedia("(max-width: 575px)").matches
+                ? { visibility: "hidden" }
+                : { visibility: "visible" }
+            }
+          >
             <i className="fas fa-dumbbell"></i>
             <p className={Style.selectorText}>{actualName}</p>
             <i

@@ -1,5 +1,6 @@
 @import "./../../../style/variables";
 @import "./../../../style/utility";
+@import "./../../../style/breakpoint";
 
 .badge {
   height: 100%;
@@ -24,4 +25,19 @@
 
 .badgeGreen {
   background-color: $green;
+}
+
+/****************************************************
+* RESPONSIVE
+****************************************************/
+
+@include small-mobile {
+  .badge{
+    position: absolute;
+    right: -5px;
+    top: 10%;
+    width: 15px;
+    height: 10px;
+    border-radius: 30%;
+  }
 }

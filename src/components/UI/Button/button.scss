@@ -1,5 +1,6 @@
 @import "./../../../style/variables";
 @import "./../../../style/utility";
+@import "./../../../style/breakpoint";
 
 .button {
   width: 240px;
@@ -65,5 +66,16 @@
   cursor: wait;
   &:before {
     background-color: rgb(53, 51, 51);
+  }
+}
+
+/****************************************************
+* RESPONSIVE
+****************************************************/
+
+@include small-mobile {
+  .button {
+    width: 100px;
+    height: 60px;
   }
 }

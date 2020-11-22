@@ -38,7 +38,7 @@ const Activity = ({ activity }) => {
   };
   return (
     <div className={Style.activity}>
-      <Badge color={activity.color}></Badge>
+      <Badge className={Style.activityBade} color={activity.color}></Badge>
       <img
         className={Style.activityLogo}
         src={activity.logo}
@@ -57,7 +57,7 @@ const Activity = ({ activity }) => {
         <h4>{activity.occupancy}</h4>
         <h5>{getDescription()}</h5>
       </div>
-      <Button color={activity.status} text={getText()}></Button>
+      <Button className={Style.activityButton} color={activity.status} text={getText()}></Button>
       <i className="fas fa-chevron-right"></i>
     </div>
   );

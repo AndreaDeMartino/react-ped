@@ -107,12 +107,14 @@
           color: $blue;
           font-family: "Helvetica Neue";
           margin-bottom: 1.5rem;
+          cursor: pointer;
           i {
             font-size: 12px;
             padding-right: 0.5rem;
           }
         }
         .selector {
+          position:relative;
           width: 80%;
           padding: 0.3rem 0.5rem;
           transform: skew(0deg);
@@ -120,7 +122,7 @@
           margin-right: 0;
           margin: 1rem 0;
           justify-content: space-between;
-          z-index: -1;
+          z-index: 1;
           p {
             text-align: left;
             width: 100%;

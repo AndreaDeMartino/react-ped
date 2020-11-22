@@ -1,5 +1,6 @@
 @import "../../../style/variables";
 @import "../../../style/utility";
+@import "../../../style/breakpoint";
 
 .activity {
   @include u-flex;
@@ -8,10 +9,10 @@
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
   margin: 0.3rem 0;
   text-align: center;
-  h5{
+  h5 {
     color: $grey;
   }
-  .activityTitle{
+  .activityTitle {
     width: 30%;
   }
   .activityLogo {
@@ -23,7 +24,7 @@
     @include u-flex;
     width: 20%;
     height: 100%;
-    i{
+    i {
       padding-right: 5px;
       color: $grey;
     }
@@ -32,7 +33,7 @@
     @include u-flex;
     width: 20%;
     height: 100%;
-    h4{
+    h4 {
       padding-right: 5px;
     }
   }
@@ -41,11 +42,46 @@
     width: 20%;
     height: 100%;
   }
-  .activityButton{
+  .activityButton {
     width: 10%;
   }
-  i{
+  i {
     padding: 0 20px 0 30px;
     cursor: pointer;
+  }
+}
+
+/****************************************************
+* RESPONSIVE
+****************************************************/
+
+@include small-mobile {
+  .activity {
+    display: unset;
+    height: 150px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    .activityLogo {
+      display: none;
+    }
+    .activityTitle {
+    }
+    .activityDuration {
+      @include u-flex;
+      position: absolute;
+      top: 2%;
+      left: 2%;
+    }
+    .activityTiming {
+    }
+    .activityStatus {
+    }
+    .activity.occupancy {
+    }
+    h5 {
+    }
+    i {
+    }
   }
 }
