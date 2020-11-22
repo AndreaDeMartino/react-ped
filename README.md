@@ -6,7 +6,7 @@
 
 ## Deployed project
 
-workinprogress
+https://react-ped.web.app/
 
 ## Project setup
 
