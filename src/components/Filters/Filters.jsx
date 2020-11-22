@@ -14,7 +14,7 @@ import { calendar } from "../../data/data";
 import { motion } from "framer-motion";
 
 // UTILITY
-import { componentsAnimation } from "./../../utility";
+import { filterAnimation } from "./../../utility";
 import { left } from "./../../utility";
 import { right } from "./../../utility";
 
@@ -94,7 +94,7 @@ const Filters = ({
   return (
     <motion.div
       className={Style.filters}
-      variants={componentsAnimation}
+      variants={filterAnimation}
       initial="hidden"
       animate="show"
       exit="exit"

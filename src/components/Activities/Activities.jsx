@@ -10,20 +10,20 @@ import Activity from "./Activity/Activity";
 import { motion } from "framer-motion";
 
 // UTILITY
-import {pageAnimation} from "./../../utility";
+import { activityAnimation } from "./../../utility";
 
-const Activities = ({ activityList }) => {
+const Activities = ({ activityList, changeList }) => {
   return (
     <Container>
       <motion.div
         className={Style.activities}
-        variants={pageAnimation}
+        variants={activityAnimation}
         initial="hidden"
         animate="show"
         exit="exit"
       >
         {activityList.map((activity) => {
-          return <Activity key={activity.id} activity={activity}></Activity>;
+          return <Activity key={activity.id} activity={activity} changeList={changeList}></Activity>;
         })}
       </motion.div>
     </Container>

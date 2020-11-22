@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 // UTILITY
 import { top } from "./../../../utility";
 
-const Activity = ({ activity }) => {
+const Activity = ({ activity, changeList }) => {
   /****************************************************
    * FUNCTIONS
    ****************************************************/
@@ -89,6 +89,8 @@ const Activity = ({ activity }) => {
         className={Style.activityButton}
         color={activity.status}
         text={getText()}
+        element={activity}
+        changeList={changeList}
       ></Button>
       {width > breakpoint && <i className="fas fa-chevron-right"></i>}
     </motion.div>

@@ -1,9 +1,11 @@
 // STYLE
 import "./button.scss";
 
-const Button = ({ color, text }) => {
+const Button = ({ color, text, changeList, element}) => {
   return (
-    <div className={`button${color} button`}>
+    <div 
+    className={`button${color} button`} 
+    onClick={ () => {changeList(element)} }>
       <p>{text}</p>
     </div>
   );

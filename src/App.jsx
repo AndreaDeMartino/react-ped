@@ -1,5 +1,5 @@
 //React
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 //STYLE
 import "./style/main.scss";
@@ -11,12 +11,39 @@ import Navbar from "./components/Shared/Navbar/Navbar";
 import Footer from "./components/Shared/Footer/Footer";
 
 //DATA
-import { activityList } from "./data/data";
+import { activityListData } from "./data/data";
 
 //ROUTER
 import { Switch, Route } from "react-router-dom";
 
 function App() {
+  const [activityList, setActivityList] = useState([]);
+
+  // Set List from local data
+  useEffect(() => {
+    setActivityList(activityListData);
+  }, []);
+
+  // Change List status from from activity button
+  const changeListHandler = (element) => {
+    let newStatus = "";
+    if (element.status === "Subscribed") {
+      newStatus = "Avaible";
+      setList(element,newStatus)
+    } else if (element.status === "Avaible") {
+      newStatus = "Subscribed";
+      setList(element,newStatus)
+    } else {
+      console.log("Attesa non ancora gestita");
+    }
+  };
+
+  const setList = (element,newStatus) => {
+    const newList = [...activityList];
+    newList[element.id - 1].status = newStatus;
+    setActivityList(newList);
+  }
+
   return (
     <div className="App">
       <Navbar></Navbar>
@@ -25,7 +52,10 @@ function App() {
           <Home />
         </Route>
         <Route path="/reservations">
-          <Reservations activityList={activityList}/>
+          <Reservations
+            activityList={activityList}
+            changeList={changeListHandler}
+          />
         </Route>
       </Switch>
       <Footer></Footer>

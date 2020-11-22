@@ -45,7 +45,7 @@ export const removeDuplicate = (list) => {
  ****************************************************/
 
 //Cascade Container
-export const pageAnimation = {
+export const filterAnimation = {
   hidden: {
     opacity: 0,
   },
@@ -63,7 +63,7 @@ export const pageAnimation = {
   },
 };
 
-export const componentsAnimation = {
+export const activityAnimation = {
   hidden: {
     opacity: 0,
   },
@@ -72,7 +72,7 @@ export const componentsAnimation = {
     transition: {
       duration: 0.3,
       when: "beforeChildren",
-      staggerChildren: 0.5,
+      staggerChildren: 0.3,
     },
   },
   exit: {
@@ -82,13 +82,13 @@ export const componentsAnimation = {
 
 //Cascade Childreen left
 export const left = {
-  hidden: { x: -2000 },
+  hidden: { x: -2500 },
   show: { x: 0, transition: { duration: 1.5 } },
 };
 
 //Cascade Childreen right
 export const right = {
-  hidden: { x: 2000 },
+  hidden: { x: 2500 },
   show: { x: 0, transition: { duration: 1.5 } },
 };
 

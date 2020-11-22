@@ -11,7 +11,7 @@ import Activities from "./../components/Activities/Activities";
 // UTILITY
 import { getSelector, removeDuplicate } from "./../utility";
 
-const Reservations = ({ activityList }) => {
+const Reservations = ({ activityList, changeList }) => {
   // All activity
   const [filterData, setfilterData] = useState(activityList);
 
@@ -41,7 +41,7 @@ const Reservations = ({ activityList }) => {
         nameList={nameList}
         clubList={clubList}
       ></Filters>
-      <Activities activityList={filterData}></Activities>
+      <Activities activityList={filterData} changeList={changeList}></Activities>
     </div>
   );
 };

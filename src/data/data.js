@@ -36,7 +36,7 @@ export const calendar = [
   },
 ];
 
-export const activityList = [
+export const activityListData = [
   {
     id: 1,
     name: 'Body pump',
