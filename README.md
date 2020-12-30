@@ -11,6 +11,7 @@ https://react-ped.web.app/
 ## Project setup
 
 ```
+npm install
 npm start
 
 ```
